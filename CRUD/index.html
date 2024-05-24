@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paixão em Cada Gol - Sua Loja de Camisetas de Futebol</title>
+    <style>
+        /* Estilização geral */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        /* Logo */
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        /* Imagem da Logo */
+        .logo img { 
+            height: 3em;  
+            width: auto;   
+        }
+
+        /* Links do Cabeçalho */
+        .header-links {
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Seção de História */
+        #historia {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        /* Título da História */
+        #historia h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        /* Texto da História */
+        #historia p {
+            font-size: 16px;
+            line-height: 1.5;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Imagem da História */
+        #historia img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        /* Seção de Camisetas */
+        #camisetas {
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Container do Carrossel */
+        .carrossel-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            width: 400%; 
+        }
+
+        /* Card de Camiseta */
+        .camiseta {
+            background-color: #fff;
+            border-radius: 8px;
+            margin: 10px;
+            overflow: hidden;
+            width: 200px; 
+            flex: 0 0 calc(100% / 4);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s;
+        }
+
+        /* Efeito hover no card */
+        .camiseta:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Imagem da Camiseta */
+        .camiseta img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        /* Informações da Camiseta */
+        .camiseta-info {
+            padding: 10px;
+        }
+
+        /* Nome da Camiseta */
+        .camiseta-nome {
+            font-weight: bold;
+            font-size: 14px; 
+        }
+
+        /* Preço da Camiseta */
+        .camiseta-preco {
+            color: #007BFF;
+            font-size: 14px; 
+        }
+
+        /* Botões do Carrossel */
+        .seta-carrossel {
+            position: absolute;
+            top: 50%;
+            background-color: rgba(0,0,0,0.5);
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 1; /* Garante que os botões fiquem acima dos cards */
+            transition: background-color 0.3s;
+        }
+
+        .seta-carrossel:hover {
+            background-color: rgba(0,0,0,0.7);
+        }
+
+        .seta-esquerda {
+            left: 10px;
+        }
+
+        .seta-direita {
+            right: 10px;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo"><img src="logotime.jpg" alt="Logo da Loja"></div>
+        <a href="cadastro.php" class="header-links">Cadastre-se</a>
+    </header>
+
+    <section id="historia">
+        <h2>Uma História de Amor pelo Futebol</h2>
+        <p>Desde pequenos, respirávamos futebol. O cheiro da grama molhada, o som da torcida vibrante e a emoção de cada gol nos marcaram para sempre. Essa paixão nos impulsionou a criar a "Camisa de Craque", uma loja dedicada a todos que, assim como nós, carregam o futebol no coração.</p>
+        <img src="futbol.jpg" alt="Imagem relacionada ao futebol">
+        <p>Acreditamos que vestir a camisa do seu time vai além de um simples ato, é demonstrar o seu amor, a sua história e a sua identidade. Por isso, buscamos oferecer camisetas de alta qualidade, com designs exclusivos e autênticos, para que você possa vibrar a cada partida com ainda mais paixão.</p>
+    </section>
+
+    <section id="camisetas">
+        <button class="seta-carrossel seta-esquerda" onclick="moverCarrossel(-1)">❮</button>
+        <div class="carrossel-container">
+            <div class="camiseta">
+                <img src="" alt="Camiseta de Futebol 1">
+                <div class="camiseta-info">
+                    <h3 class="camiseta-nome">Camiseta 1</h3>
+                    <p class="camiseta-preco">R$ 99,90</p>
+                </div>
+            </div>
+            <div class="camiseta">
+                <img src="" alt="Camiseta de Futebol 2">
+                <div class="camiseta-info">
+                    <h3 class="camiseta-nome">Camiseta 2</h3>
+                    <p class="camiseta-preco">R$ 89,90
